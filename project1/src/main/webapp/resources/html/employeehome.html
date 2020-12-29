@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"     integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/project1/resources/css/employeestyles.css" />
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  	<div class="container-fluid">
+	    <a id="revImage" class="navbar-brand" href="/project1/api/forwarding/home">
+	    	<img class="img-responsive" src="https://ww1.prweb.com/prfiles/2018/01/03/15051815/Revature_CMYK.png" alt="">
+	    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/project1/api/forwarding/home"><b>HOME</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><b>TIMESHEET</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><b>EXPENSE REIMBURSEMENT</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><b>ADVANCE PAYMENT</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><b>HELP</b></a>
+        </li>
+      </ul>
+      <ul class="d-flex navbar-nav me-5 mb-2 mb-lg-0">
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-bell"></i>
+            <b><span id = "loginTitle"></span></b>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">My Settings</a></li>
+            <li><a id="logout" class="dropdown-item">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="row g-0">
+	
+	<div class="col-5 g-0">
+	
+		<div id="leftsideid" class="leftside d-flex flex-column justify-content-start align-items-center">
+
+			<div id="userInfoCard" class="card table-responsive">
+				<div class="card-header text-white" style="background-color: #55698d;">
+					<h5 class="text-center">User Information</h5>
+				</div>
+			  <div class="card-body">
+			     <table id="myInfoTable" class="table table-striped ">
+				  	<thead>
+				    <tr>
+				      <th scope="col">User ID</th>
+				      <th scope="col">Name</th>
+				      <th scope="col">Username</th>
+				      <th scope="col">Password</th>
+				      <th scope="col">Email</th>
+				      <th scope="col">Role</th>
+				    </tr>
+				 	 </thead>
+				       <tbody id="infoTableBody">
+				  
+				  	</tbody>
+				</table>
+			  </div>
+			</div>
+
+			<div id="createReimbCard" class="card" style="width: 18rem;">
+				<div class="card-header text-white" style="background-color: #55698d;">
+					<h5 class="text-center">Create Reimbursement</h5>
+				</div>
+			  <div class="card-body">
+			    <div id="reimbCreator">
+					<input id = "amount1" class="form-control mb-2" type="number" placeholder="Enter Amount" name="amount">
+					<input id = "descrip1" class="form-control mb-2" type="text" placeholder="Enter description" name="description">
+					<select id = "typing" class="form-select mb-2" aria-label="Type select example">
+			  			<option value="OTHER">Select Status To Show</option>
+			  			<option value="LODGING">LODGING</option>
+			  			<option value="TRAVEL">TRAVEL</option>
+			  			<option value="FOOD">FOOD</option>
+			  			<option value="OTHER">OTHER</option>
+					</select>
+					<input id="createInp" class="form-control btn btn-primary" type="submit" value="Submit Reimbursement">
+				</div>
+			  </div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="col-7 g-0">
+	
+		<div id="rightsideid" class="rightside d-flex justify-content-center align-items-start">
+		
+			<div id="userReimbCard" class="card">
+				<div class="card-header text-white" style="background-color: #55698d;">
+					<h5 class="text-center">User Reimbursements</h5>
+				</div>
+			  <div class="card-body">
+			    <input type="submit" value="Update Reimbursement Info" id="reimbSubmit" class="form-control btn btn-primary" />
+     
+			     <table id="myReimbTable" class="table">
+			  	<thead>
+			    <tr>
+			      <th scope="col">ReimbID</th>
+			      <th scope="col">Amount</th>
+			      <th scope="col">Time Submitted</th>
+			      <th scope="col">Time Resolved</th>
+			      <th scope="col">Description</th>
+			      <th scope="col">Resolver</th>
+			      <th scope="col">Status</th>
+			      <th scope="col">Type</th>
+			    </tr>
+			 	 </thead>
+			       <tbody id="reimbTableBody">
+			  
+			  	</tbody>
+				</table>
+			  </div>
+			</div>
+		</div>
+		
+	</div>
+	
+	 <!--<div class="col g-0">
+	
+		<div class="rightside d-flex justify-content-center align-items-center">
+			right
+		</div>
+		
+	</div>-->
+	
+</div>
+     
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+     <script type="text/javascript" src="/project1/resources/js/employee-home-functionality.js"></script>
+     
+</body>
+</html>

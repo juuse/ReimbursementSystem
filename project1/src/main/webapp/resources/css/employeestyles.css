@@ -1,0 +1,81 @@
+@charset "ISO-8859-1";
+/*
+	CSS file associated with the employeehome.html page
+*/
+
+body {
+	background-color: "#f4f6f9";
+}
+
+.card{
+    padding: 20px;
+    margin: 10px;
+    border: #d8dde6 solid 2px;
+}
+/*All the button changing for color*/
+.card-body .btn-primary { 
+  background: #f26925;
+  border-color: #f26925;
+}
+
+.card-body .btn-primary a {
+  color: #f26925;
+}
+
+.card-body .btn-primary:hover { 
+  background: #d7500d;
+}
+/* End of button changing */
+
+/*Screen Splitting*/
+.leftside, .middleside, .rightside{
+	height: 100vh;
+	width: 100%;
+}
+
+.leftside{
+	background: #f4f6f9;
+}
+
+.middleside{
+	background: #f4f6f9;
+}
+
+.rightside{
+	background: #f4f6f9;
+}
+/*Screen splitting end*/
+
+.navbar-brand .img-responsive {
+	height: 100%;
+    width: 100%;
+}
+
+.navbar {
+	border: #d8dde6 solid 2px;
+}
+
+#revImage {
+	height: 50px;
+	width: 150px;
+}
+
+#myInfoTable{
+	height: 100%;
+	width: 100%;
+}
+#leftsideid .card{
+	width: 100% !important;
+}
+
+/*
+#rightsideid{
+	position: relative;
+}*/
+
+#userReimbCard{
+	width: 100% !important;
+	/*position: absolute;
+	top:0px;*/
+	padding: 0px;
+}

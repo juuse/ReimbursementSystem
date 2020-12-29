@@ -1,0 +1,95 @@
+@charset "ISO-8859-1";
+
+/*
+	CSS file associated to the loginpage.html
+*/
+
+.card{
+    padding: 20px;
+    margin: 10px;
+    border: #d8dde6 solid 2px;
+}
+/*All the button changing for color*/
+.card-body .btn-primary { 
+  background: #f26925;
+  border-color: #f26925;
+}
+
+.card-body .btn-primary a {
+  color: #f26925;
+}
+
+.card-body .btn-primary:hover { 
+  background: #d7500d;
+}
+/* End of button changing */
+
+/*Screen Splitting*/
+.leftside, .rightside{
+	height: 100vh;
+	width: 100%;
+}
+
+.leftside{
+	background: #f4f6f9;
+}
+
+.rightside{
+	background: #2f2f2f;
+}
+/*Screen splitting end*/
+
+.img-responsive {
+	height: 100%;
+    width: 100%;
+}
+
+/*Link changing start*/
+a:link{
+  color: black !important;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 80%;
+}
+
+a:visited {
+  color: black !important;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 80%;
+}
+
+a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+  
+}
+/*Link changing end*/
+/*Icon modification start*/
+.iconInput{
+	border: #d8dde6 solid 2px;
+	padding: 10px;
+}
+
+.iconInput > *{
+	border-color: white;
+	border: 0 !important;
+}
+
+.iconInput > i{
+	margin-left: 5%;
+}
+/*Icon modification end*/
+
+#leftsideid{
+	position: relative;
+}
+
+#leftsideid .img{
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	width: 60px;
+	height: 60px;
+}
